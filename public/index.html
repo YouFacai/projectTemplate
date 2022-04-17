@@ -1,17 +1,44 @@
 <!DOCTYPE html>
 <html lang="">
   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <link rel="icon" href="<%= BASE_URL %>favicon.ico" />
+    <link rel="stylesheet" href="./css//normalize.css">
     <title><%= htmlWebpackPlugin.options.title %></title>
   </head>
   <body>
     <noscript>
-      <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+      <strong
+        >We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work
+        properly without JavaScript enabled. Please enable it to
+        continue.</strong
+      >
     </noscript>
-    <div id="app"></div>
+    <div id="app">
+      <!-- shell -->
+    </div>
     <!-- built files will be auto injected -->
+    <script>
+      (function (designWidth, minWidth) {
+        let docEle = document.documentElement;
+        let screenRatioByDesign = 16 / 9;
+        function setHtmlFontSize() {
+          var screenRatio = docEle.clientWidth / docEle.clientHeight;
+          var fontSize =
+            ((screenRatio > screenRatioByDesign
+              ? screenRatioByDesign / screenRatio
+              : 1) *
+              docEle.clientWidth) /
+            10;
+
+          docEle.style.fontSize = fontSize.toFixed(3) + "px";
+          console.log(fontSize.toFixed(3) + "px")
+        }
+        setHtmlFontSize();
+        window.addEventListener("resize", setHtmlFontSize);
+      })(1920, 1024);
+    </script>
   </body>
 </html>
