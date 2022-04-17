@@ -235,6 +235,8 @@ export default {
   border-radius: 10px;
   background: white;
   overflow: auto;
+  height: 100px;
+   overflow: hidden;
 }
 
 /* 遮罩层 */
@@ -245,15 +247,5 @@ export default {
   height: 100vh;
   background: rgba(190, 190, 190, 0.6);
   z-index: 300;
-}
-
-.shoshadewScreen {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 70%;
-  background: #fff;
-  z-index: 10;
-  border-radius: 20px 20px 0 0;
 }
 </style>

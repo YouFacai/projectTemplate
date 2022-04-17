@@ -61,11 +61,11 @@ export default {
       //   地图配置
       mapConfig: {
         // 地图周边搜索POI
-        PoiKey:["街道", "学校", "餐饮"],
+        PoiKey: ["街道", "学校", "餐饮"],
         // 默认搜索周边POI半径 (米)
-        defaultPoint:1500,
+        defaultPoint: 1500,
         // 地图的初始缩放比例 0 - 20
-        scale:15
+        scale: 15,
       },
     };
   },
@@ -184,27 +184,11 @@ export default {
 </script>
 
 <style scoped>
-.gps-box {
-  width: 100%;
-  height: 100vh;
-}
-
-.item-text {
-  font-size: 14px;
-}
-
-.select-box-module {
-  width: 100%;
-  height: 400px;
-}
-
 .select-input {
-  font-size: 16px;
-  border: none;
-  outline: none;
-  height: 50px;
   width: 100vw;
   text-align: center;
+  outline: none;
+  border: none;
 }
 
 .current-address {
@@ -213,16 +197,16 @@ export default {
 
 #container {
   position: relative;
-  top: 10px;
   width: 100%;
-  height: 900px;
+  height: 240px;
 }
 
 .context {
+  overflow-x: hidden;
   margin-top: 10px;
   width: 100%;
-  height: calc(100vh - 1080px);
-  overflow: auto;
+  height: calc(100vh - 300px);
+  font-size: 14px;
 }
 .content-msg {
   width: 100%;
@@ -247,12 +231,12 @@ export default {
 
 .select-box {
   display: flex;
-  align-items: center;
   background: #eaeaea;
-  border-radius: 50px !important;
-  height: 120px !important;
+  border-radius: 10px;
+  height: 30px;
   justify-content: center;
-  margin: 0 5px;
+  margin: 5px;
+  line-height: 30px;
 }
 
 .selecticon {
@@ -268,6 +252,7 @@ export default {
 }
 
 .select-input {
+  font-size: 14px;
   position: relative;
   left: -10px;
   width: 80%;
@@ -284,18 +269,16 @@ export default {
 
 .item-style {
   display: flex;
-  font-size: 16px;
   color: #272727;
   font-weight: bold;
   width: 100%;
+  min-height: 30px;
+  line-height: 30px;
   padding: 0 10px;
-  height: 200px;
-  align-items: center;
 }
 
 .gps-icon {
   margin: 5px 2px 0 0;
-  width: 130px;
-  height: 130px;
+  width: 20px;
 }
 </style>

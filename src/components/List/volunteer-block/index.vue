@@ -101,7 +101,6 @@ export default {
   background: white;
   top: 0;
   padding: 5px 0;
-  height: 400px;
 }
 .state {
   position: absolute;
