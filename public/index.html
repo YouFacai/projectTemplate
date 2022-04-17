@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0" />
     <link rel="icon" href="<%= BASE_URL %>favicon.ico" />
-    <link rel="stylesheet" href="./css//normalize.css">
+    <link rel="stylesheet" href="./css//normalize.css" />
     <title><%= htmlWebpackPlugin.options.title %></title>
   </head>
   <body>
@@ -19,7 +19,10 @@
     <div id="app">
       <!-- shell -->
     </div>
-    <!-- built files will be auto injected -->
+    <script
+      type="text/javascript"
+      src="//mapopen.cdn.bcebos.com/github/BMapGLLib/DistanceTool/src/DistanceTool.min.js"
+    ></script>
     <script>
       (function (designWidth, minWidth) {
         let docEle = document.documentElement;
@@ -34,7 +37,7 @@
             10;
 
           docEle.style.fontSize = fontSize.toFixed(3) + "px";
-          console.log(fontSize.toFixed(3) + "px")
+          console.log(fontSize.toFixed(3) + "px");
         }
         setHtmlFontSize();
         window.addEventListener("resize", setHtmlFontSize);

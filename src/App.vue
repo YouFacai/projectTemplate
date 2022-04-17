@@ -1,19 +1,21 @@
 <template>
-    <div class="App">
-        <!-- 滚动列表 -->
-        <rollList/>
-    </div>
+  <div class="App">
+    <!-- 滚动列表 -->
+    <!-- <RollList/> -->
+    <GpsMap />
+  </div>
 </template>
 
 <script>
-import rollList from '@/components/List/rollList/index.vue';
+// 滚动列表
+// import RollList from '@/components/List/rollList/index.vue';
+import GpsMap from "@/components/GpsMap/index.vue";
 export default {
-   components:{
-       rollList
-   }
-}
+  components: {
+    // RollList,
+    GpsMap,
+  },
+};
 </script>
 
-<style>
-
-</style>
+<style></style>
